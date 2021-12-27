@@ -1,0 +1,26 @@
+{
+  "name": "typechain",
+  "version": "1.0.0",
+  "description": "노마드 코더 강좌 실습용",
+  "main": "index.js",
+  "dependencies": {
+    "typescript": "^4.5.4",
+    "yarn": "^1.22.17"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "prestart": "npx tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoursaint/TypeChain.git"
+  },
+  "author": "yoursaint",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yoursaint/TypeChain/issues"
+  },
+  "homepage": "https://github.com/yoursaint/TypeChain#readme"
+}
