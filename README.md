@@ -67,3 +67,26 @@ npx tsc
 2021-12-27 21:47   
 
 ---
+## 2. first step with typescript
+- typescript는 개발자가 저지를 수 있는 멍청한 실수를 방지해줌
+    - 함수 사용 시 매개 변수가 전달되지 않으면 `undefined` 발생
+- 컴파일러는 선언된 함수를 사용할때 매개변수를 확인하여 의도하지 않은 매개변수 누락을 방지할 수 있도록 함
+    - 모든 매개변수가 전달되지 않으면 컴파일시 오류 발생
+    - 매개변수 바로 뒤에 ?를 붙이면 선택적으로 매개변수를 사용할 수 있도록 할 수 있음
+    - 물음표가 붙은 매개변수는 전달되지 않더라도 컴파일러에서 오류가 발생하지 않음
+
+> 실행 코드는 "2. first step with typescript" commit의 index.ts 참조
+
+- 실행 결과
+```bash
+> npm start
+
+> typechain@1.0.0 prestart C:\Users\shutt\git\TypeChain
+> npx tsc
+
+
+> typechain@1.0.0 start C:\Users\shutt\git\TypeChain
+> node index.js
+
+Hello yoursaint, you are 25, you are a male
+```
