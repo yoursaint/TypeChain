@@ -68,6 +68,7 @@ npx tsc
 
 ---
 ## 2. first step with typescript
+### 2.1 매개변수와 typescript 컴파일러 
 - typescript는 개발자가 저지를 수 있는 멍청한 실수를 방지해줌
     - 함수 사용 시 매개 변수가 전달되지 않으면 `undefined` 발생
 - 컴파일러는 선언된 함수를 사용할때 매개변수를 확인하여 의도하지 않은 매개변수 누락을 방지할 수 있도록 함
@@ -90,3 +91,54 @@ npx tsc
 
 Hello yoursaint, you are 25, you are a male
 ```
+## 2.1 types in typescript
+- typescript는 변수의 type을 지정할 수 있음
+    - 본 실습에서는 string과 number로 매개변수의type을 지정하였음
+    - 매개변수가 전달될때 함수 선언 시 지정되었던 type과 다르면 error 발생
+    - function이 return을 수행할 경우 함수 선언 시 지정되었던 return type과 다르면 error 발생
+
+> execution code는 "types in typescript" commit의 index.ts 참조
+## 번외. tsc-watch (실시간 컴파일)
+- tsc-watch는 코드가 수정되어 저장될때마다 컴파일을 수행하고 그 결과를 실시간으로 작성자에게 보여주는 모듈
+    - 매번 코드 작성시마다 컴파일할 필요가 없음
+    - 기존 코드에서 아래와 같은 작업이 수행되어야 함
+
+1. module install
+    - npm을 사용하여 모듈을 인스톨함
+    - devDependencies
+```bash
+npm install tsc-watch --also=dev
+```
+2. tsconfig modify
+    - tsconfig.json의 compilerOptions와 include value를 수정
+        - compilerOption에는 outDIr key를 추가하여 컴파일 산출물이 해당 폴더에 저장될 수 있도록 함
+            - 본 실습에서는 dist폴더를 생성하여 저장할 수 있도록 함
+        - include를 수정하여 소스파일을 해당 폴더에서 불러올 수 있도록 함
+            - 본 실습에서는 src 폴더를 생성하고 작성되는 ts 코드를 관리 하며, 해당 폴더의 ts파일을 포함하기 위해 `"src/**/*"`로 값을 변경
+
+3. package.json modify
+    - npm start를 통해 tsc-watch를 실행 할 수 있도록 key로 start 가지는 script를 변경
+    - onSuccess는 저장 후 컴파일이 성공했을때 후에 전달되는 명령을 실행
+        - 명령은 큰따옴표("")안에 기술되어야 함
+
+```json
+"scripts": {
+    "start": "tsc-watch --onSuccess \" node dist/index.js\""
+}
+```       
+
+4. excute command
+    - npm start를 수행하면 다음과 같은 결과가 도출
+    - save(ctrl + s)를 할 때마다 결과값이 terminal에 표시
+    - exit은 ctrl + c
+```bash
+> npm start
+오전 12:32:59 - Starting compilation in watch mode...
+
+
+오전 12:33:02 - Found 0 errors. Watching for file changes.
+Hello yoursaint, you are 25, you are a male
+```
+2021-12-30 00:37
+
+---
