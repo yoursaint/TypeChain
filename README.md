@@ -160,4 +160,8 @@ const sayHi = (person: human): string => {
     return `Hello ${person.name}, you are ${person.age}, you are a ${person.gender}`
 }
 ```
-- 이와 같이 사용되는 inteface는 추후 실습할 블록체인 구현에서 한 블록의 데이터 구조를 나타내는데 사용될 수 있음
+- 이와 같이 사용되는 inteface는 추후 실습할 블록체인 구현에서 한 블록의 데이터 구조를 나타내는데 사용될 수 있음   
+
+2022-01-01 00:06
+
+---

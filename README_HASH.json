@@ -1,12 +1,17 @@
 {
-    "2021-12-27" : {
-        "time" : "21:47",
+    "2021-12-27": {
+        "time": "21:47",
         "hash_algo": "sha256",
-        "hash_value" : "93ea91a6d5ff80e1388dc47ca6c8f1775672bee8f91c66d75f639e51d5aa6fa2"
+        "hash_value": "93ea91a6d5ff80e1388dc47ca6c8f1775672bee8f91c66d75f639e51d5aa6fa2"
     },
-    "2021-12-30" : {
-        "time" : "00:37",
+    "2021-12-30": {
+        "time": "00:37",
         "hash_algo": "sha256",
-        "hash_value" : "c03bb6959301607ff6da28464c3b53da1fd9498cf3f81fa5de8af4fa8bbf1e35"
+        "hash_value": "c03bb6959301607ff6da28464c3b53da1fd9498cf3f81fa5de8af4fa8bbf1e35"
+    },
+    "2022-01-01": {
+        "time": "00:06",
+        "hash_algo": "sha256",
+        "hash_value": "83f533ba86cc43fd23469e3632e5f05f0ef10af160d1ce45af218b48048a6055"
     }
 }
