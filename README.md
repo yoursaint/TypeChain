@@ -111,7 +111,7 @@ npm install tsc-watch --also=dev
 ```
 2. tsconfig modify
     - tsconfig.json의 compilerOptions와 include value를 수정
-        - compilerOption에는 outDIr key를 추가하여 컴파일 산출물이 해당 폴더에 저장될 수 있도록 함
+        - compilerOption에는 outDir key를 추가하여 컴파일 산출물이 해당 폴더에 저장될 수 있도록 함
             - 본 실습에서는 dist폴더를 생성하여 저장할 수 있도록 함
         - include를 수정하여 소스파일을 해당 폴더에서 불러올 수 있도록 함
             - 본 실습에서는 src 폴더를 생성하고 작성되는 ts 코드를 관리 하며, 해당 폴더의 ts파일을 포함하기 위해 `"src/**/*"`로 값을 변경
