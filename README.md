@@ -142,3 +142,22 @@ Hello yoursaint, you are 25, you are a male
 2021-12-30 00:37
 
 ---
+## 3. Interfaces on typescript
+- Typescript에서 매개변수로 object를 넘길 때 보다 object 구성요소의 type을 명확하게 하기위해 Interface를 사용할 수 있음
+- Interface는 object의 구성요소와 해당 구성요소의 type을 사전 지정해 선언
+- 선언된 Interface는 type 지정시에 `number`, `string` 등의 types와 같이 사용될 수 있음
+
+```javascript
+// interface 선언
+interface human {
+    name: string,
+    age: number,
+    gender: string
+}
+
+// interface를 type으로 사용
+const sayHi = (person: human): string => {
+    return `Hello ${person.name}, you are ${person.age}, you are a ${person.gender}`
+}
+```
+- 이와 같이 사용되는 inteface는 추후 실습할 블록체인 구현에서 한 블록의 데이터 구조를 나타내는데 사용될 수 있음
