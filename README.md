@@ -165,3 +165,29 @@ const sayHi = (person: human): string => {
 2022-01-01 00:06
 
 ---
+## 4. Classes on Typescript part One
+- React, node 등의 사용을 위해서 interface가 아닌 class로 object를 정의하여 사용할 수 있음
+- private, public으로 공개 범위를 설정하여 data hidding을 수행할 수 있음
+- constructor(생성자)를 정의하여 초기 객체 생성 시의 행동을 정의할 수 있음
+- 데이터 입력 및 사용시에는 객체를 생성하여 사용해야 함
+- 이외의 사용방법은 Interface와 같음
+    - 매개 변수 명 뒤에 `?`를 붙일 경우 선택적으로 받는 등...
+
+```javascript
+// class 정의
+class Human {
+    public name: string;
+    public age: number;
+    public gender: string;
+
+    // 생성자 정의
+    constructor(name: string, age: number, gender: string) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+    }
+}
+
+// 객제 생성
+const sung = new Human("sunghyun", 25, "male");
+```
