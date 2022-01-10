@@ -191,3 +191,17 @@ class Human {
 // 객제 생성
 const sung = new Human("sunghyun", 25, "male");
 ```
+
+## 5. Creating a Block part One
+- Class로 Block의 구조를 정의
+    - index: 블록 번호
+    - hash: 블록 해시
+    - previousHash: 이전 블록 해시
+    - data: 저장 데이터
+    - timestamp: 생성 시각
+- `genesisBlock`을 변수명으로 가지는 초기 블록 객체 생성
+- Array of blocks => blockchain
+
+2022-01-11 08:07
+
+---
